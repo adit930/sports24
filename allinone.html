@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AllInOne'23</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #101014;
+  }
+
+  .container{
+    width: 100%;
+    height: 100vh;
+  }
+
+  /* NAVBAR */
+  .header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 7%;
+    transition: all .50s ease;
+  }
+
+ .logo img{
+    display: flex;
+    align-items: center;
+  }  
+  
+  .navbar{
+    display: flex;
+    /* width: 40%; */
+    
+  }
+
+ ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+  }
+  
+  ul li a{
+    padding: 0 30px;
+    text-decoration: none;
+    color: #999;
+    display: inline-block;
+    transition: all .50s ease;
+  }
+  
+  ul li a:hover{
+    color: #fff
+  }
+
+  li a::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background-color: #C82B00;
+    transition:all .5s;
+    
+  }
+  
+  a:hover::after{
+    width: 100%;
+    
+  }
+
+  .main{
+    display: flex;
+    align-items: center;
+  }
+
+  .main a{
+    margin-right: 25px;
+    margin-left: 10px;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+    padding: 10px 17px;
+    background-color: #999;
+    border-radius: 5px;
+    
+  }
+
+  .main a:hover{
+    color: #fff;
+    background-color: #C82B00
+  }
+
+  #menuIcon{
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+  }
+
+  .contactButton{
+    padding: 10px; 
+    margin-right: 10px;
+    border-radius:6px; 
+    border-width: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 1280px){
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+  }
+  @media (max-width: 1090px){
+    .main a{
+        color: #C82B00;
+    }
+    #menuIcon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 29vh;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover{
+        color: #fff;
+        transform: translateY(5px);
+    }
+    .navbar a.active{
+        color: #fff;
+    }
+    .navbar.open{
+        right: 2%;
+    }
+  }
+ /* NAVBAR */
+
+ /* HOME PAGE */
+.homeContent{
+    height: 100vh;
+    padding: 0 7%;
+   
+}
+ .row{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    margin-top: 5px;
+ }
+ .col{
+    flex-basis: 60% 40%;
+ }
+
+ h1{
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 100px;
+ }
+
+ .contactButton:hover{
+  opacity:0.6; 
+  transition:0.3s ease-in-out;
+  cursor: pointer;
+ }
+
+ .sports{
+    color: #fff;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 8rem;
+    margin-top: 25px;
+    letter-spacing: 2px;
+ }
+
+ .comm{
+    color: #C82B00;
+    font-family: 'League Gothic', sans-serif;
+ }
+ .sportsText{
+  font-size: 17px;
+  line-height: 25px;
+  width: 90%;
+ }
+ /* .sports:hover{
+    color: #C82B00;
+ }
+
+ .comm:hover{
+    color: #fff;
+ } */
+ /* p{
+    color: #C82B00;
+    font-size: 30px;
+    line-height: 24px;
+ } */
+
+ /* p:hover{
+    color: #fff;
+ } */
+
+
+.homeImage{
+    width: 230px;
+    height: 230px;
+}
+
+.contactImg{
+  width: 15%;
+}
+
+.images{
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 220px 220px;
+    grid-template-rows: 220px 220px;
+}
+
+ 
+  :root {
+    --space: 8vmin;
+    --duration: 300ms;
+    --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+    --bounce-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  .image-wrapper {
+    width: 280px;
+    height: 230px;
+    overflow: hidden;
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 0 50%, 0 0);
+    transition: transform var(--duration) var(--ease-out),
+      clip-path var(--duration) var(--ease-out);
+  }
+  
+  .image-wrapper img {
+    position: relative;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    transform: translateX(-10%);
+    transition: transform var(--duration) var(--ease-out);
+  }
+  
+  .promo:hover img {
+    transform: translateX(0);
+  }
+  
+  .promo:hover .image-wrapper {
+    clip-path: polygon(75% 0, 100% 50%, 75% 100%, 0 100%, 25% 50%, 0 0);
+    transform: translateX(25%);
+    transition-timing-function: var(--bounce-out);
+  }
+  
+  .image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    transform: translateZ(0);
+    transition: opacity var(--duration) var(--ease-out);
+  }
+  
+  
+/* HOME PAGE */
+
+/* About US */
+
+.subTitleStyle {
+  color: "#fff";
+  font-family: "Montserrat";
+  font-weight: "100";
+  font-size: "200px";
+  width: 60%;
+  text-align: center;
+  color: #fff;
+  margin-top: 0;
+}
+
+.contactText{
+  color:#000;
+  align-self: center;
+  padding-left: 10px;
+  margin-top:0;
+}
+
+.titleBox{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* color: "#fff"; */
+  /* background-color: "#000"; */
+  height: "100vh";
+  margin-top: "30px";
+}
+
+.titleBox1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* color: "#fff"; */
+  /* background-color: "#000"; */
+  height: "100vh";
+  margin-top: "30px";
+}
+
+.titleBox2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* color: "#fff"; */
+  /* background-color: "#000"; */
+  height: "100vh";
+  margin-top: "30px";
+}
+
+/* .titleStyle {
+  font-family: "League Gothic";
+  color: "#fff";
+  font-size: "200px";
+} */
+
+.titleStyle {
+  font-family: "League Gothic";
+  color: "#fff";
+  font-size: "200px";
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13rem;
+  color: #fff;
+  text-align: center;
+}
+
+.titleStyleTheme {
+  font-family: "League Gothic";
+  color: "#fff";
+  font-size: "200px";
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13rem;
+  color: #fff;
+  text-align: center;
+}
+.imgStyle {
+  width: 34%;
+  height: 20rem;
+  object-fit: cover;
+  margin-left: 2px;
+  margin-right: 6px;
+}
+
+.imgBox {
+  margin-top: 30px;
+  /* margin-left: 5px; */
+  /* margin-right: 5px; */
+  display: grid;
+  /* flex-direction: row; */
+  overflow: hidden;
+  padding: 60px 0;
+  width: 100vw;
+  height: 100vh;
+  grid: 1fr min-content min-content 1fr/1fr;
+  align-items: center;
+  justify-items: center;
+  margin: 0;
+}
+
+.aboutImgStyle {
+  /* margin: 20px; */
+  width: 300.555px;
+}
+
+/* About US */
+
+.aboutBox{
+  display: flex; flex-direction: row; justify-content: center; margin-top: 30px; margin-bottom: 30px;
+}
+
+.objectiveBox{
+  height: fit-content; width: 45%; color:#fff; font-family: 'Montserrat', sans-serif; display: flex; justify-content: center;  flex-direction: column; padding-right: 30px;
+}
+
+.objectiveText{
+  text-align:justify; width: 90%; line-height: 30px;  
+}
+
+/* EVENTS */
+
+.eventsText{
+  text-align: center;
+  font-size: 20px;
+  /* line-height: 25px; */
+  margin-left: 80px;
+  margin-top: 0px;
+}
+
+.events{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.wrapper{
+  max-width: 1200px;
+  position: relative;
+}
+
+.wrapper i{
+  top: 50%;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  position: absolute;
+  text-align: center;
+  line-height: 46px;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+}
+
+.wrapper i:first-child{
+  display: none;
+  left: -23px;
+}
+
+.wrapper i:last-child{
+  right: -23px;
+}
+
+.wrapper .carousel{
+  white-space: nowrap;
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.carousel.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging img{
+  pointer-events: none;
+}
+
+.wrapperImg:hover{
+  opacity: 0.2;
+  transition: 0.2s ease-in-out;
+}
+
+.carousel img{
+  height: 340px;
+  object-fit: cover;
+  margin-left: 14px;
+  width: calc(100% / 3);
+}
+
+.carousel img:first-child{
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 576px) {
+  .row{
+    flex-direction: column;
+
+  }
+  .col{
+    padding-left: 30px;
+  }
+  .sports{
+    margin-top: 130px;
+  }
+  .sportsText{
+    width: 100%;
+  }
+  .titleBox{
+    margin-top: 430px;
+    margin-bottom: 50px;
+  }
+  .titleStyle{
+    font-size: 120px;
+    padding-left: 25px;
+    line-height: 120px;
+  }
+  .aboutImgStyle{
+    width: 120%;
+  }
+  .aboutBox{
+    flex-direction: column;
+    padding-left: 30px;
+  }
+  .objectiveBox{
+    width: 100%;
+    padding-right: 0;
+  }
+  .objectiveText{
+    text-align: left;
+  }
+  .titleBox1{
+    margin-top: 30px;
+    padding-left: 20px;
+  }
+  .events{
+    padding-left: 30px;
+  }
+  .titleBox2{
+    padding-left: 0;
+  }
+  .team{
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .carousel img{
+      width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .carousel img{
+      width: 100%;
+  }
+}
+
+/* EVENTS */
+
+/* Schedule Maps */
+
+main.table {
+  width: 82vw;
+  height: 70vh;
+  background-color: rgb(29, 29, 100) ;
+
+  backdrop-filter: blur(7px);
+  box-shadow: 0 .4rem .8rem rgba(236, 226, 226, 0.333);
+  border-radius: .8rem;
+
+  overflow: hidden;
+}
+
+.table__header {
+  width: 100%;
+  height: 10%;
+  background-color: rgb(2, 2, 62);
+  padding: .8rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table__header .input-group {
+  width: 35%;
+  height: 100%;
+  background-color:rgb(2, 2, 62);
+  padding: 0 .8rem;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .2s;
+}
+
+.table__header .input-group:hover {
+  width: 45%;
+  background-color: rgb(2, 2, 62);
+  box-shadow: 0 .1rem .4rem #0002;
+}
+
+.table__header .input-group img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.table__header .input-group input {
+  width: 100%;
+  padding: 0 .5rem 0 .3rem;
+  
+  border: none;
+  outline: none;
+}
+
+.table__body {
+  width: 95%;
+  max-height: calc(89% - 1.6rem);
+  background-color: rgb(161, 161, 197);
+
+  margin: .8rem auto;
+  border-radius: .6rem;
+
+  overflow: auto;
+  overflow: overlay;
+}
+
+.table__body::-webkit-scrollbar{
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.table__body::-webkit-scrollbar-thumb{
+  border-radius: .5rem;
+  background-color: rgb(2, 2, 62);
+  visibility: visible;
+}
+
+.table__body:hover::-webkit-scrollbar-thumb{ 
+  visibility: visible;
+}
+
+table {
+  color: #FFF;
+  width: 100%;
+}
+
+td img {
+  width: 36px;
+  height: 36px;
+  margin-right: .5rem;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+table, th, td {
+  border-collapse: collapse;
+  padding: 1rem;
+  text-align: left;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgb(2, 2, 62);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgb(99, 99, 144);
+}
+
+tbody tr {
+  --delay: .1s;
+  transition: .5s ease-in-out var(--delay), background-color 0s;
+}
+
+tbody tr.hide {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+tbody tr:hover {
+  background-color: rgb(98, 98, 178) !important;
+}
+
+tbody tr td,
+tbody tr td p,
+tbody tr td img {
+  transition: .2s ease-in-out;
+}
+
+tbody tr.hide td,
+tbody tr.hide td p {
+  padding: 0;
+  font: 0 / 0 sans-serif;
+  transition: .2s ease-in-out .5s;
+}
+
+tbody tr.hide td img {
+  width: 0;
+  height: 0;
+  transition: .2s ease-in-out .5s;
+}
+
+
+
+@media (max-width: 1000px) {
+  td:not(:first-of-type) {
+      min-width: 12.1rem;
+  }
+}
+
+thead th span.icon-arrow {
+  display: inline-block;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  border: 1.4px solid transparent;
+  
+  text-align: center;
+  font-size: 1rem;
+  
+  margin-left: .5rem;
+  transition: .2s ease-in-out;
+}
+
+thead th:hover span.icon-arrow{
+  border: 1.4px solid #FFF;
+}
+
+thead th:hover {
+  color: #FFF;
+}
+
+thead th.active span.icon-arrow{
+  background-color: #6c00bd;
+  color: #fff;
+}
+
+thead th.asc span.icon-arrow{
+  transform: rotate(180deg);
+}
+
+thead th.active,tbody td.active {
+  color: #6c00bd;
+}
+
+/*Card*/
+
+.card-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: black;
+  perspective: 1000px;
+  width: 30%;
+  height: 450px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  margin: 0 10px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card .card-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.card .card-inner .card-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+}
+
+.card .card-inner .card-face.front {
+  background-color: black;
+}
+
+.card .card-inner .card-face.back {
+  background-color: black;
+  transform: rotateY(180deg);
+  padding: 10px;
+}
+
+
+.card .card-image {
+  max-width: max-content;
+  max-height: 100%;
+  object-fit:fill;
+  border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+      width: 100%; /* Resize to 100% width for smaller screens */
+  }
+}
+/* FOOTER */
+
+.footer{
+  align-items: center;
+}
+
+.contactText{
+  color:#fff;
+  align-self: center;
+  padding-left: 10px;
+  margin-top: 10px;
+  font-size: 1.05rem;
+}
+
+.contactImg{
+  margin: 0 20px;
+  width: 40px;
+}
+
+/* Hover videos*/
+
+.item {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .item:hover .wrapperImg {
+        transform: scale(1.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .item:hover .video {
+        display: block;
+    }
+
+
+    body{
+    background-color: #101014;
+  }
+
+  
+  p{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --teamImage-height: 50vh;
+    --teamImage-width: calc(var(--teamImage-height) / 1.5);
+  }
+
+ 
+
+
+  .mot {
+      margin: 30px 0;
+  }
+
+  .team {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px; /* Adjust the margin as needed */
+  }
+
+  .team .teamBox {
+      flex: 1 0 calc(33.333% - 20px); /* Three items in one line with margin-right */
+      margin: 0 10px 20px 10px; /* Adjust the margin as needed */
+      position: relative;
+      overflow: hidden;
+  }
+
+  .teamImage {
+      background: #101014;
+      width: 100%;
+      height: 400px; /* Adjusted height */
+      padding: 3px;
+      position: relative;
+      border-radius: 6px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      font-size: 1.5em;
+      color: rgb(88 199 250 / 0%);
+      cursor: pointer;
+      font-family: cursive;
+  }
+
+  .teamImage:hover {
+      background-color: #ff6600; /* Red background on hover */
+      transition: background-color 1s;
+  }
+
+  .individuals {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto; /* Make images responsive */
+      height: auto; /* Make images responsive */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      border-radius: 8px;
+  }
+
+  .name {
+      margin: 0;
+      color: #fff; /* Text color */
+      font-size: 1em;
+  }
+
+  .textOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text */
+      padding: 10px;
+      box-sizing: border-box;
+      
+  }
+  
+  .teamBack {
+    width: 100%;
+    height: 400px; /* Adjusted height */
+    border-radius: 6px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+}
+
+.teamBack {
+    transform: rotateY(180deg);
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+    .team .teamBox {
+      flex: 1 0 calc(100% - 20px); /* One item in one line with margin-right */
+      margin-left: 60px;
+    
+  }
+  /* Common styles for both elements */
+  .titleStyle {
+    margin-top: 50px;
+    margin-left: 30px
+  }
+
+  .titleStyleTheme {
+    margin-right: 50px;
+    font-size: 50px;
+  }
+  
+  .titleStyleTeam {
+    margin-left: 100px;
+    font-size: 100px;
+    text-align: center;
+    font: bold;
+    font-family:'League Gothic';
+  }
+  h1 {
+    font-size: 20px;
+    margin-left: 90px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    font-family: 'League Gothic';
+    color: #fff;
+  }
+
+  h1.Sub{
+    font-size: 20px;
+    margin-left:110px ;
+  }
+
+  h1.Com {
+    font-size: 20px;
+    margin-left: 60px;
+
+  }
+  
+  .teamImage {
+    background: #101014;
+    width: 100%;
+    height: 400px;
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+  }
+  
+  .teamImage:hover {
+    background-color: #ff6600;
+    transition: background-color 1s;
+  }
+  
+  .individuals {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .name {
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  .textOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .teamBack {
+    width: 100%;
+    height: 400px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+  }
+  
+  .teamBack {
+    transform: rotateY(180deg);
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .objectiveBox {
+    width: 100%;
+    padding-right: 0;
+    margin: 0 auto; /* Center align the box for mobile */
+    margin-bottom: 20px; /* Add margin between the boxes on mobile */
+    margin-left: 60px;
+    margin-top: 40px;
+  }
+  .titleBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 95px;
+    /* color: "#fff"; */
+    /* background-color: "#000"; */
+    height: "70vh";
+    margin-top: 480px;
+  }
+  .aboutImgStyle {
+    /* margin: 20px; */
+    width: 200px;
+    margin-left: 290px;
+  }
+  
+
+  .objectiveText {
+    width: 100%;
+    line-height: 24px;
+  }
+  .card {
+    width: 100%; /* Adjust width to 100% for mobile devices */
+    margin-left: 120px;
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards vertically on mobile devices */
+    align-items: center; /* Center-align cards on mobile devices */
+  }
+  .themeBox {
+    display: flex;
+    margin-left: 30px;
+  }
+  .titleStyle {
+    margin-top: 20px;
+  }    
+  
+  .titleBox p {
+    margin-top: 20px;
+  }
+  .themeBox h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'League Gothic';
+    color: #fff;
+    margin-left: 20px;
+  }
+  
+  .descriptionBox {
+    margin-top: 60px;
+    margin-left: 27px;
+  }
+
+  .descriptionBox p {
+    margin-left: 80px;
+  }
+  
+  .descriptionBox p {
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .card-container h1 {
+    text-align: center;
+  }
+  
+  .themeText {
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Montserrat';
+    margin-top: 63px;
+    width: 90%;
+    margin-left: 40px;
+  }
+  #event.titlebox1 {
+    margin-left: 90px;
+    margin-top: 80px;
+  }
+  .eventsText {
+    margin-left: 80px;
+    margin-top: 30px; /* Adjust margin for mobile devices */
+  }
+
+  .events {
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 50px; /* Stack events vertically on mobile */
+  }
+
+  .wrapper i:first-child {
+    display: block; /* Show the first child icon on mobile */
+  }
+
+  .wrapper i:last-child {
+    display: block; /* Hide the last child icon on mobile */
+  }
+
+  .carousel img {
+    height: 200px; /* Adjust image height for mobile devices */
+    width: 100%; /* Make images take full width on mobile */
+    margin-left: 0; /* Remove left margin for mobile devices */
+  }
+  /*table*/
+
+  .titleBox1 {
+    margin-left: 74px;
+    margin-top: 40px;
+  }
+  .main.table {
+    width: 90vw; /* Adjust width for mobile devices */
+    height: 90vh; /* Adjust height for mobile devices */
+    margin-left: 10px; /* Add margin to the left for mobile devices */
+  }
+
+  .table__header {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table__header .input-group {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .table__header .input-group:hover {
+    width: 100%;
+  }
+
+  .table__body {
+    width: 100%;
+    max-height: calc(90% - 1.6rem);
+    margin: 0.8rem 0;
+  }
+
+  table {
+    font-size: 14px; /* Adjust font size for mobile devices */
+  }
+
+  td img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+  .footer{
+    align-items: center;
+    margin-left: 120px;
+  }
+  
+  .contactText{
+    color:#fff;
+    align-self: center;
+    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 1.05rem;
+  }
+  
+  .contactImg{
+    margin: 0 20px;
+    width: 40px;
+  }
+}
+  </style>
+  <script>
+    let menu = document.querySelector('#menuIcon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('open');
+}
+
+const carousel = document.querySelector(".carousel"),
+firstImg = carousel.querySelectorAll("img")[0];
+arrowIcons = document.querySelectorAll(".wrapper i");
+
+let isDragStart = false, prevPageX, prevScrollLeft;
+
+
+
+const showHideIcons = () => {
+    let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+}
+
+arrowIcons.forEach(icon => {
+    icon.addEventListener("click", () => {
+        let firstImgWidth = firstImg.clientWidth + 14;
+        carousel.scrollLeft +=icon.id == "left" ? -firstImgWidth : firstImgWidth;
+        setTimeout(() => showHideIcons(), 60);
+    });
+});
+
+const dragStart = (e) => {
+    isDragStart = true;
+    prevPageX = e.pageX || e.touches[0].pageX;
+    prevScrollLeft = carousel.scrollLeft;
+}
+
+const dragging = (e) => {
+    if(!isDragStart) return;
+    e.preventDefault();
+    carousel.classList.add("deagging");
+    let positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+    carousel.scrollLeft = prevScrollLeft - positionDiff;
+    showHideIcons();
+}
+
+
+
+const dragStop = () => {
+    isDragStart = false;
+    carousel.classList.remove("deagging");
+}
+
+carousel.addEventListener("mousedown", dragStart);
+carousel.addEventListener("touchstart", dragStart);
+
+carousel.addEventListener("mousemove", dragging);
+carousel.addEventListener("touchmove", dragging);
+
+carousel.addEventListener("mouseup", dragStop);
+carousel.addEventListener("mouseleave", dragStop);
+carousel.addEventListener("touchend", dragStop);
+
+function createRandomSpan() {
+  const newDigit = document.createElement("span");
+  return newDigit;
+}
+
+function getRandom(nonZero) {
+  return nonZero
+    ? Math.floor(Math.random() * 9) + 1
+    : Math.floor(Math.random() * 10);
+}
+
+function createRandomNumbersTo(parentNode) {
+  if (!parentNode) {
+    throw new Error("Must be a valid parent node");
+  }
+  return function (digits, nextDigitTimeGap, digitSettledTime) {
+    let isValid = (number) => Number.isSafeInteger(+number) && +number > 0;
+
+    if (
+      !isValid(digits) ||
+      !isValid(nextDigitTimeGap) ||
+      !isValid(digitSettledTime)
+    ) {
+      throw new Error("Arguments must be positive integer");
+    }
+
+    if (digitSettledTime <= 10) {
+      throw new Error("digitSettledTime must be greater than 10 milliseconds");
+    }
+
+    return new Promise((resolve, reject) => {
+      function getFinalNumber() {
+        parentNode.classList.add("random-resolved");
+        let number = parentNode.innerText;
+        parentNode.innerHTML = number;
+        if (!Number.isSafeInteger(+number)) {
+          resolve(BigInt(number));
+          return;
+        }
+        resolve(+number);
+      }
+
+      function gerenateNumber(speed, endTime, nonZero = false) {
+        let newDigit = createRandomSpan();
+        parentNode.prepend(newDigit);
+        let digitId = setInterval(() => {
+          if (shouldStop()) {
+            clearInterval(digitId);
+            return;
+          }
+          endTime -= speed;
+          let randomNumber = getRandom(nonZero);
+          if (endTime > 0) {
+            newDigit.textContent = randomNumber;
+            return;
+          }
+          newDigit.classList.add("random-resolved");
+          clearInterval(digitId);
+        }, speed);
+      }
+      let digit = 1;
+      let isLastDigit = () => digit === digits;
+
+      function generateDigit() {
+        if (shouldStop()) {
+          clearInterval(genRandomNumberId);
+          return;
+        }
+        if (isLastDigit()) {
+          gerenateNumber(10, digitSettledTime, true);
+          setTimeout(() => {
+            getFinalNumber();
+          }, digitSettledTime);
+          clearInterval(genRandomNumberId);
+          return;
+        }
+        gerenateNumber(10, digitSettledTime);
+        digit++;
+      }
+
+      let genRandomNumberId = setInterval(generateDigit, nextDigitTimeGap);
+      generateDigit(); //remove first interval delay
+    });
+  };
+}
+
+function prependRandomNumbersTo(selector) {
+  if (typeof selector !== "string" || !selector.length) {
+    throw new Error("Selector should be non-empty string");
+  }
+  const element = document.querySelector(selector);
+  return createRandomNumbersTo(element);
+}
+
+function shouldStop() {
+  return stop;
+}
+function resetAll() {
+  stop = true;
+  let numbers = [...document.querySelectorAll(".number")];
+  numbers.forEach((number) => {
+    number.textContent = "";
+    number.classList.remove("random-resolved");
+  });
+  setTimeout(() => {
+    main();
+  }, 1000);
+}
+
+function main() {
+  stop = false;
+  //   prependRandomNumbersTo(".very-slow")(5, 1000, 1200).then((n) =>
+  //     console.log(`resolved (very slow):`, n)
+  //   );
+  prependRandomNumbersTo(".slow")(7, 500, 1000).then((n) =>
+    console.log(`resolved (slow):`, n)
+  );
+  //   prependRandomNumbersTo(".medium-slow")(10, 250, 1100).then((n) =>
+  //     console.log(`resolved (medium slow):`, n)
+  //   );
+  //   prependRandomNumbersTo(".medium")(15, 100, 1000).then((n) =>
+  //     console.log(`resolved (medium):`, n)
+  //   );
+  //   prependRandomNumbersTo(".medium-fast")(20, 70, 200).then((n) =>
+  //     console.log(`resolved (medium fast):`, n)
+  //   );
+  //   prependRandomNumbersTo(".fast")(25, 50, 50).then((n) =>
+  //     console.log(`resolved (fast):`, n)
+  //   );
+  //   prependRandomNumbersTo(".very-fast")(30, 15, 20).then((n) =>
+  //     console.log(`resolved (very fast):`, n)
+  //   );
+}
+
+let stop = false;
+
+main();
+
+
+    </script>
+
+        <!-- Font Links -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+        <!-- ICONS -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    </head>
+
+    <audio id="backgroundMusic" loop>
+    <source src="Metro Boomin - Am I Dreaming (Lyrics) ft. A$AP Rocky, Roisee.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    const audio = document.getElementById('backgroundMusic');
+
+    // Play the music when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        audio.play();
+    });
+
+    // You can add controls to pause/play the music if needed
+    document.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+        } 
+    });
+</script>
+        
+        <div class="container">
+            <div class="header">
+                <!-- NAVBAR -->
+
+                <div class="logo">
+                    <a href="index.html"><img src="images/prabalya_white_logo.png" alt="logo" width="150px"></a>
+                </div>
+
+                <ul class="navbar">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#theme">Theme</a></li>
+                    <li><a href="#event">Events</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a href="#team">Our Team</a></li>
+                </ul>
+
+                <div class="main">
+                    <a href="#event" class="registerBtn">Register</a>
+                    <div class="bx bx-menu" id="menuIcon"></div>
+                </div>
+            </div>
+
+            <div class="homeContent">
+                <div class="row">
+                    <div class="col">
+
+                        <!-- <p
+                            style="padding-top:20px; font-size:20px; font-family: 'Montserrat';color: #C82B00; font-size: 30px; ">
+                            NMIMS,
+                            Navi Mumbai
+                            presents</p> -->
+                        <p class="sports" style="line-height: 120px;">Welcome,<span style="color: #C82B00">
+                                Athletes.</span></p>
+                        <p class="sportsText" style="color:#fff; margin-top:24px; font-family: 'Montserrat'; ">Where passion meets performance, Prabalya'23 is your ultimate sports destination. 
+                            Join us for 3 days of fun, fitness and thrill</p>
+
+                    
+                            <style>
+                                .stats-container {
+                                    display: flex;
+                                    margin-top: 36px;
+                                }
+                        
+                                .prop {
+                                    opacity: 0.7;
+                                    border-radius: 5px;
+                                    background-color: #333;
+                                    padding: 15px 12px;
+                                    width: 100px;
+                                    margin-left: 30px;
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+
+                                .prop:hover{
+                                        transform: scale(1.1);
+                                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+                                }
+                        
+                                .number {
+                                    font-family: 'League Gothic';
+                                    color: #fff;
+                                    font-size: 50px;
+                                    margin-top: 0;
+                                }
+                        
+                                .description {
+                                    color: #fff;
+                                    font-size: 15px;
+                                    font-family: 'Montserrat';
+                                    font-weight: 600;
+                                    text-align: center;
+                                    margin-top: 8px;
+                                    background-color: transparent;
+                                }
+                            </style>
+                        
+                        
+                            <div class="stats-container">
+                                <div class="prop">
+                                    <p class="number slow">500+</p>
+                                    <p class="description">Participants attended</p>
+                                </div>
+                        
+                                <div class="prop">
+                                    <p class="number">300+</p>
+                                    <p class="description">Prizes Distributed</p>
+                                </div>
+                        
+                                <div class="prop">
+                                    <p class="number">12+</p>
+                                    <p class="description">Events conducted</p>
+                                </div>
+                            </div>
+                    
+
+                        <div style="margin-top: 20px;">
+                            <p style="color:#888; font-size:10px; font-style: italic;">~ Statistics from Prabalya'22.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col images promo" style="margin-left: 60px;">
+                        <div class="image-wrapper"><img class="homeImage "
+                                src="images/events/ronaldo.png" alt=""></div>
+                        <div class="image-wrapper"><img class="homeImage"
+                                src="images/tom-briskey-HM3WZ4B1gvM-unsplash.jpg" alt=""></div>
+                        <div class="image-wrapper"><img class="homeImage"
+                                src="images/yogendra-singh-dE3exzmYlKc-unsplash.jpg" alt=""></div>
+                        <div class="image-wrapper"><img class="homeImage"
+                                src="images/muktasim-azlan-tkVwhG6yqKo-unsplash.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ABOUT THE FEST -->
+
+        <div>
+            <div id="about" class="titleBox">
+                <p class="titleStyle" style="margin-top: 50px;">
+                    ABOUT PRABALYA
+                </p>
+            </div>
+            <div class="aboutBox">
+                <div
+                    style=" height: fit-content; width: 45%; display: flex; justify-content: center;align-items: center;">
+                    <img src="images/Parbalya Logo.png" alt="Volunteer" class="aboutImgStyle">
+                    <!-- left container -->
+                </div>
+                <div class="objectiveBox">
+                    <!-- right container -->
+                    <p style="font-weight: 400; font-size: 50px; margin-bottom: 10px; margin-top: 10px;">Objective.</p>
+                    <hr style="    width: 20%;
+                    background-color: white;
+                    height: 3px; text-align: center;
+                    /* align-self: start; */
+                    border-radius: 2px;
+                    /* padding: 0; */
+                    border-width: 0;
+                    margin: 0;
+                    margin-top: 12px;
+                    margin-bottom: 12px;">
+                    <p class="objectiveText">The sports
+                        committee is to promote
+                        every individuals’
+                        health, physical well-being as well as the acquistion of physical skills among the
+                        students. The committee aspires to inculcate qualities such as sportsmanship,
+                        team spirit and bonding. It is designed to serve the interests of the student
+                        community competitive sports and other recreational activities i.e. both indoor and outdoor.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="theme" class="titleBox">
+            <p class="titleStyle" style="margin-top: 50px;">
+                OUR THEME
+            </p>
+        </div>
+        
+        <div class="themeBox">
+            <div>
+                <h1 style="font-size: 160px; font: bold; text-align: center; font-family: 'League Gothic'; color: #fff;">Greek Mythology</h1>
+            </div>
+                <!-- left container -->
+            </div>
+            <div class="descriptionBox">
+                <!-- right container -->
+                <p style="font-weight: 400; font-size: 50px; margin-bottom: 10px; margin-top: 30px; text-align: center">Theme Overview.</p>
+                <p class="themeText" style="font-size:20px; text-align:'center'; font-family: 'Montserrat'; margin-top: 63px; width: 90%; margin-left: 80px;">Step into the realm of gods and heroes as Prabalya, our sports fest, unveils the majestic world of Greek mythology. In an epic scavenger hunt, 8 schools at NMIMS will battle for supremacy, embodying the spirit of gods and goddesses. The top three schools will ascend the podium as Zeus, Poseidon, and Hades, adding a mythic twist to the triumphs of athletic prowess. Let the games begin, where legends are born!
+                </p>
+            </div>
+        </div>
+
+        <div class="card-container" style="margin-top: 60px;">
+            <div class="card" style="background-color: black;">
+                <div class="card-inner">
+                    <div class="card-face front">
+                        <img src="images/zeus card.png" alt="Card 1" class="card-image">
+                    </div>
+                    <div class="card-face back">
+                        <h1>Zeus</h1>
+                        <p style="text-align: center; font-family: 'Montserrat';">
+                            Zeus, the king of the Greek gods, is a figure of immense power and authority. He is the god of the sky and thunder, and he is often depicted as a bearded man wielding a lightning bolt. He is the father of many gods and heroes, and he is also known for his many affairs with both goddesses and mortal women.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card" style="background-color: black;">
+                <div class="card-inner">
+                    <div class="card-face front">
+                        <img src="images/poseidon. cardjpg-PhotoRoom.png-PhotoRoom.png" alt="Card 2" class="card-image">
+                    </div>
+                    <div class="card-face back">
+                        <h1>Poseidon</h1>
+                        <p style="text-align: center; font-family: 'Montserrat';">Poseidon, the god of the sea, earthquakes, storms, and horses, is one of the most powerful and feared gods in Greek mythology. He is also known for his wisdom and justice, and as the protector of seafarers and the guardian of many Hellenic cities and colonies.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="card" style="background-color: black;">
+                <div class="card-inner">
+                    <div class="card-face front">
+                        <img src="images/hades card-PhotoRoom.png-PhotoRoom.png" alt="Card 3" class="card-image">
+                    </div>
+                    <div class="card-face back">
+                        <h1>Hades</h1>
+                        <p style="text-align: center; font-family: 'Montserrat';">Hades, the Greek god of the underworld, is a figure of immense power and mystery. He is the ruler of the realm of the dead, but he is also a protector of the dead and a giver of wealth. Hades is a reminder of the inevitability of death, but he is also a symbol of hope and rebirth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          
+
+        <!-- EVENTS -->
+        <div id="event" class="titlebox1">
+            <p class="titleStyle" style="margin-top: 50px;">
+                EVENTS
+            </p>
+        </div>
+
+        <p class="eventsText" style="color:#fff; font-family: 'Montserrat'; width: 90%;">From heart-pumping action to nail-biting finishes, sports events have it all. 
+            Whether you're a die-hard fan or a casual spectator, there's something for everyone.</p>
+
+        <div class="events">
+            <div class="wrapper">
+                <i id="left" class='bx bx-chevron-left'></i>
+                <div class="carousel">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfA2qgKf_ek3N8tGW5o10kr_QrJKt6domUkd1wXg0JqceHLpA/viewform" target="_blank">
+                        <img src="images/events/doubles 2.0.png" class="wrapperImg" alt="">
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0kz46S5wOSV0GYt1ZhBQUU08q5SF5PeMnV0nJQaPag7c7ew/viewform" target="_blank">
+                            <img src="images/events/bgirls.jpg" class="wrapperImg" alt="">
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNSyb3gxOv3fTB3WxQUpLq8j6_8zRReywNqCttlhorYaEU7A/viewform" target="_blank">
+                        <img src="images/events/leomessifootball.jpg" class="wrapperImg" alt="">
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdtfdHqG4aaxR4zSscwSHwvlGpGWmYwPwpMpaCHWuEqCTrcPQ/viewform" target="_blank">
+                        <img src="images/events/lebron basketball.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfojVaZkRuDO7OeNKMQ4NqqDA1Mllvs2DGMDDJdolfkhgz5XQ/viewform" target="_blank">
+                        <img src="images/events/boxCricket.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScNQDnx4jNlLVPah9ya6zzviF6_Gc567t2bbYzi1_ZMZXUVaw/viewform" target="_blank">
+                        <img src="images/events/Carrom 2.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeH1C5L9ZX4oGwS3Gz2xyGc0eVfY2AiOAf6co6KARIZx-lrAQ/viewform" target="_blank">
+                        <img src="images/events/Chess 2.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1yI3xREcCcEsFiUm0odk-OrCDg2D-D_7bTYeWB66BfB0cyw/viewform" target="_blank">
+                        <img src="images/events/vik_cricket.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSergEJWPm60xhTLXDtBsdUrXrwrB-tYjgktcuB-b0x78nUFsA/viewform" target="_blank">
+                        <img src="images/events/Tennis.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScDYF3pBAROtAvzj1SMco5297J2Je5bDANHJbyJL-KYXDDZHA/viewform" target="_blank">
+                        <img src="images/events/tt doubles.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSduL3dY5783eOQ-BtA8BcS3Aa87J4gv1MY1PpChtDJsoOMcWA/viewform" target="_blank">
+                        <img src="images/events/fifa-23-12.webp" class="wrapperImg" alt="">
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScZP5ueS9uDRrRub9fUYCSr-rajboBoO-pxlIfZ8L9rjHHLgg/viewform" target="_blank">
+                        <img src="images/events/valorant-2_mdt7.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSekI5SD3rv6JK6MUQh5EMEko5RLeOCc2ygfThalaFMZrgO4ug/viewform" target="_blank">
+                        <img src="images/events/among-us-vr-imposter-next-to-body.jpg" class="wrapperImg" alt="">
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfXxc8xNx6wX97Y3DKO_m1lg64Y8D4AbkHAd8OMjvmCY_yIbQ/viewform" target="_blank">
+                        <img src="images/events/clash-royale.jpg" class="wrapperImg" alt="">
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5vfftMQTv2IE2caXhWQ1foetvsm-z_X1aeHQgFNOa2-0s4Q/viewform" target="_blank">
+                        <img src="images/events/Fooseball.jpg" class="wrapperImg" alt="">
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeawFnaj3_iZl0_q9WruSV3cGDlRDr4gF2wCrPclr35XTtTjQ/viewform" target="_blank">
+                        <img src="images/events/tugowar.jpg" class="wrapperImg" alt="">
+                    </a>
+
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfT-7REvcpy7Lk2yfnTEpcJHu7d11-hoeGryZ9vYyzjtkQ3mA/viewform" target="_blank">
+                        <img src="images/events/Kho-Kho.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScIdjnua3IJe4H97t6dIzSZmRbVyZ7vLit03vgKaCG2Kwx6EA/viewform" target="_blank">
+                        <img src="images/events/100m mens.jpg" class="wrapperImg" alt="">
+                    </a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLVADLFjkhPStWgZZjdSqy-YFfF17yVB1yMk2W6U5imfG6ZA/viewform" target="_blank">
+                        <img src="images/events/100x4-m-race.jpeg" class="wrapperImg" alt="">
+                    </a>
+                </div>
+                <i id="right" class='bx bx-chevron-right' ></i>
+            </div>
+        </div>
+
+
+        <!-- Schedule -->
+
+        <div id="schedule" class="titleBox1">
+            <p class="titleStyle" style="margin-top: 50px;">
+                SCHEDULE
+            </p>
+        </div>
+        <main class="table" style="margin:0 auto">
+            <section class="table__header">
+                <p style="font-size: 20px; padding-left:5px; font-weight: 500; margin: 0 auto; margin-top: 15px;">
+                    <font COLOR="White" style="text-align: center;">Prabalya: Day 1</FONT>
+                </p>
+
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Date </span></th>
+                            <th> Event </span></th>
+                            <th> Venue </span></th>
+                            <th> Timings </span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 9th March, 2023 </td>
+                            <td>Opening Ceremony</td>
+                            <td>Seminar Hall 3rd Floor</td>
+                            <td> 9 A.M. Onwards </td>
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023 </td>
+                            <td>Cricket: 11v11</td>
+                            <td> Shaikh 11 Ground </td>
+                            <td> 10 A.M.-6 P.M. </td>
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td>Box Cricket</td>
+                            <td> Main Entrance </td>
+                            <td> 11 A.M.-6 P.M. </td>
+
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td> Carrom </td>
+                            <td> GCR </td>
+                            <td>11 A.M.-6 P.M. </td>
+
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td>Chess</td>
+                            <td>BCR</td>
+                            <td> 11 A.M.-6 P.M.</td>
+
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td>Badminton </td>
+                            <td> Kendiya Vihar Court </td>
+                            <td> 9 A.M.-6 P.M. </td>
+
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td>FIFA </td>
+                            <td> Classroom </td>
+                            <td> 11 A.M.-6 P.M. </td>
+
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td>VR</td>
+                            <td> Seminar Hall 1st Floor </td>
+                            <td> 11 A.M.-6 P.M. </td>
+
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td>Kinnet Bowling</td>
+                            <td> Classroom </td>
+                            <td>11 A.M.-6 P.M. </td>
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td>PS4 Casual </td>
+                            <td> Classroom </td>
+                            <td> 11 A.M.-6 P.M. </td>
+                        </tr>
+                        <tr>
+                            <td> 9th March, 2023</td>
+                            <td>Valorant</td>
+                            <td> Online </td>
+                            <td> 8 A.M.-10 P.M. </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <main class="table" style="margin:40px auto">
+            <section class="table__header">
+                <p style="font-size: 20px; padding-left:5px; font-weight: 500; margin: 0 auto; margin-top: 15px;">
+                    <FONT COLOR="White" style="text-align: center;">Prabalya: Day 2</FONT>
+                </p>
+
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Date </span></th>
+                            <th> Event </span></th>
+                            <th> Venue </span></th>
+                            <th> Timings </span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 10th March, 2023 </td>
+                            <td>Cricket: 11v11</td>
+                            <td>Shaikh 11 Ground</td>
+                            <td> 10 A.M.-6 P.M. </td>
+                        </tr>
+                        <tr>
+                            <td> 10th March, 2023 </td>
+                            <td>Tug-o-War</td>
+                            <td> Main Entrance </td>
+                            <td> 11 A.M.-6 P.M. </td>
+                        </tr>
+                        <tr>
+                            <td> 10th March, 2023</td>
+                            <td>Kho Kho</td>
+                            <td> Main Entrance </td>
+                            <td> 11 A.M.-6 P.M. </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 10th March, 2023</td>
+                            <td> Football </td>
+                            <td> Empyrean Turf </td>
+                            <td>5 P.M.-10 P.M. </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 10th March, 2023</td>
+                            <td>Basketball</td>
+                            <td>Empyrean Turf</td>
+                            <td>5 P.M.-10 P.M.</td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 10th March, 2023</td>
+                            <td>Table Tennis</td>
+                            <td> BCR,GCR </td>
+                            <td> 11 A.M.-6 P.M. </td>
+                            
+                        </tr>
+                        <tr>
+                            <td> 10th March, 2023</td>
+                            <td>Clash Royale</td>
+                            <td>Classroom</td>
+                            <td> 11 A.M.-6 P.M. </td>
+                            
+                        </tr>
+                        <tr>
+                            <td> 10th March, 2023</td>
+                            <td>VR</td>
+                            <td> Seminar Hall 1st Floor </td>
+                            <td>11 A.M.-6 P.M. </td>
+                        </tr>
+                        <tr>
+                            <td> 10th March, 2023</td>
+                            <td>Kinnet Sport </td>
+                            <td> Classroom </td>
+                            <td> 11 A.M.-6 P.M. </td>
+                       </tr>
+                           <tr>
+                               <td> 10th March, 2023</td>
+                               <td>PS4 Casual</td>
+                               <td> Classroom </td>
+                               <td> 11 A.M.-6 P.M. </td>
+                           
+                        </tr>
+                    <tr>
+                           <td> 10th March, 2023</td>
+                           <td>Valorant</td>
+                           <td> Online </td>
+                           <td> 8 A.M.-10 P.M. </td>
+                       
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <main class="table" style="margin:40px auto">
+            <section class="table__header">
+                <p style="font-size: 20px; padding-left:5px; font-weight: 500; margin: 0 auto; margin-top: 15px;">
+                    <FONT COLOR="White" style="text-align: center;">Prabalya: Day 3</FONT>
+                </p>
+
+                </div>
+            </section>
+            <section class="table__body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th> Date </span></th>
+                            <th> Event </span></th>
+                            <th> Venue </span></th>
+                            <th> Timings </span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 11th March, 2023 </td>
+                            <td>Football</td>
+                            <td>Empyrean Turf</td>
+                            <td> 10 A.M.-4 P.M. </td>
+                        </tr>
+                        <tr>
+                            <td> 11th March, 2023 </td>
+                            <td>Basketball</td>
+                            <td>Empyrean Turf</td>
+                            <td> 10 A.M.-4 P.M.</td>
+                        </tr>
+                        <tr>
+                            <td> 11th March, 2023</td>
+                            <td>Box Cricket</td>
+                            <td> Main Entrance </td>
+                            <td> 9 A.M.-6 P.M. </td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 11th March, 2023</td>
+                            <td>Table tennis </td>
+                            <td> BCR </td>
+                            <td>9 A.M.-6 P.M.</td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 11th March, 2023</td>
+                            <td>Foosball</td>
+                            <td>GCR</td>
+                            <td>9 A.M.-6 P.M.</td>
+                           
+                        </tr>
+                        <tr>
+                            <td> 11th March, 2023</td>
+                            <td>VR</td>
+                            <td>Seminar Hall 1st Floor</td>
+                            <td>10 A.M.-6 P.M.</td>
+                         
+                        </tr>
+                        <tr>
+                            <td> 11th March, 2023</td>
+                            <td>Kinnet Bowling</td>
+                            <td> Classroom</td>
+                            <td>10 A.M.-6 P.M.</td>
+                            
+                        
+                           <tr>
+                               <td> 11th March, 2023</td>
+                               <td>PS4 Casual</td>
+                               <td> Classroom </td>
+                               <td> 10 A.M.-6 P.M. </td>
+                           
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <!-- Meet Our team -->
+
+        <div id="team" class="titleBox2">
+            <p class="titleStyleTeam" style="margin-top: 50px;">
+                MEET OUR TEAM
+            </p>
+            <h1 style="font-size: 160px; font: bold; text-align: center; font-family: 'League Gothic'; color: #fff;">Core</h1>
+
+        </div>
+        <div class="mot">
+            <div></div>
+            <div class="team">
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/Core 23-24/Manthan.jpeg" alt="">
+                        <div class="textOverlay">
+                            <p class="name" style="font-family: 'Montserrat';">President- Manthan Patil</p>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+
+        <div class="mot">
+            <div class="team">
+                <div class="teamBox" >
+                <div class="teamImage">
+                        <img class="individuals" src="images/Core 23-24/devarshbafna.png" alt="">
+                        <div class="textOverlay">
+                            <p class="name" style="font-family: 'Montserrat';">Vice President-Devarsh Bafna</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/Core 23-24/yashopaliwal.png" alt="">
+                        <div class="textOverlay">
+                            <p class="name" style="font-family: 'Montserrat';">Secretary - Yashowardhan Paliwal</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/Core 23-24/arnavsirsu.jpg" alt="">
+                        <div class="textOverlay">
+                            <p class="name" style="font-family: 'Montserrat';">Vice President- Arnav Sirsu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mot">
+                <div class="team">
+                    <div class="teamBox">
+                        <div class="teamImage">
+                            <img class="individuals" src="images/Core 23-24/KusumPanamgipalli.JPG" alt="">
+                            <div class="textOverlay">
+                                <p class="name" style="font-family: 'Montserrat';">Vice Treasurer- Kusum Panamgipalli</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamBox">
+                        <div class="teamImage">
+                            <img class="individuals" src="images/Core 23-24/Bindi (1).png" alt="">
+                            <div class="textOverlay">
+                                <p class="name" style="font-family: 'Montserrat';">Treasurer- Bindi Gondalia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="teamBox">
+                        <div class="teamImage">
+                            <img class="individuals" src="images/Core 23-24/SaranshSahay.png" alt="">
+                            <div class="textOverlay">
+                                <p class="name" style="font-family: 'Montserrat';">Vice Treasurer- Saransh Sahay</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mot">
+                    <div class="team">
+                        <div class="teamBox">
+                            <div class="teamImage">
+                                <img class="individuals" src="images/Core 23-24/DhruvShetty.jpeg" alt="">
+                                <div class="textOverlay">
+                                    <p class="name" style="font-family: 'Montserrat';">Inventory Co-Head- Dhruv Shetty</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamBox">
+                            <div class="teamImage">
+                                <img class="individuals" src="images/Core 23-24/Saunved.PNG" alt="">
+                                <div class="textOverlay">
+                                    <p class="name" style="font-family: 'Montserrat';">Inventory Head- Saunved Palve</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamBox">
+                            <div class="teamImage">
+                                <img class="individuals" src="images/Core 23-24/AdityaTotala.jpeg" alt="">
+                                <div class="textOverlay">
+                                    <p class="name" style="font-family: 'Montserrat';">Inventory Co-Head- Aditya Totala</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mot">
+                        <div class="team">
+                            <div class="teamBox">
+                                <div class="teamImage">
+                                    <img class="individuals" src="images/Core 23-24/palaksingh.JPG" alt="">
+                                    <div class="textOverlay">
+                                        <p class="name" style="font-family: 'Montserrat';">Co Secretary (Externals): Palak Singh</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teamBox">
+                                <div class="teamImage">
+                                    <img class="individuals" src="images/Core 23-24/AbbasMerchant.jpg" alt="">
+                                    <div class="textOverlay">
+                                        <p class="name" style="font-family: 'Montserrat';">Co-Secretary(Internals)- Abbas Merchant</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="teamBox">
+                                <div class="teamImage">
+                                    <img class="individuals" src="images/Core 23-24/umangagarwal.jpeg" alt="">
+                                    <div class="textOverlay">
+                                        <p class="name" style="font-family: 'Montserrat';">Co-Secretary (Events)- Umang Agarwal</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+          </div>
+          <h1 class="Sub" style="font-size: 160px; font: bold; text-align: center; font-family: 'League Gothic'; color: #fff;">Sub</h1>
+          <h1 class="Com" style="font-size: 160px; font: bold; text-align: center; font-family: 'League Gothic'; color: #fff;">Committee</h1>
+          <div class="mot">
+            <div class="team">
+                <div class="teamBox">
+                    <div class="teamCard">
+                        <div class="teamImage">
+                            <img class="individuals" src="images/SubCom 23-24/creatives.png" alt="">
+                            <div class="textOverlay">
+                                <p class="name">Creatives Department</p>
+                            </div>
+                        </div>
+                        <div class="teamBack">
+                            <p class="backText">Back of the card - Black Background</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamBox">
+                    <div class="teamCard">
+                        <div class="teamImage">
+                            <img class="individuals" src="images/SubCom 23-24/spons.png" alt="">
+                            <div class="textOverlay">
+                                <p class="name">Sponsorship Department</p>
+                            </div>
+                        </div>
+                        <div class="teamBack">
+                            <p class="backText">Back of the card - Black Background</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamBox">
+                    <div class="teamCard">
+                        <div class="teamImage">
+                            <img class="individuals" src="images/SubCom 23-24/pr.png" alt="">
+                            <div class="textOverlay">
+                                <p class="name">PR Department</p>
+                            </div>
+                        </div>
+                        <div class="teamBack">
+                            <p class="backText">Back of the card - Black Background</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mot">
+            <div class="team">
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/SubCom 23-24/events.png" alt="">
+                        <div class="textOverlay">
+                            <p class="name">Events Department</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/SubCom 23-24/subcom.png" alt="">
+                        <div class="textOverlay">
+                            <p class="name">Sub-Committee</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/SubCom 23-24/esports.png" alt="">
+                        <div class="textOverlay">
+                            <p class="name">E-Sports Department</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mot">
+            <div class="team">
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/SubCom 23-24/logi.png" alt="">
+                        <div class="textOverlay">
+                            <p class="name">Logistics Department</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/SubCom 23-24/hospi.png" alt="">
+                        <div class="textOverlay">
+                            <p class="name">Hospitality Department</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="teamBox">
+                    <div class="teamImage">
+                        <img class="individuals" src="images/SubCom 23-24/sec.png" alt="">
+                        <div class="textOverlay">
+                            <p class="name">Security Department</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <footer>
+            <div class="footer" style="display: flex; flex-direction: column; padding: 40px 40px;">
+                <hr style="height:1px; width:100%; background-color:#777; margin:20px 20px; align-self: center; border-width:0; border-radius: 5px;">
+                <p style="font-size:30px; font-family: 'Montserrat';">Prabalya'23</p>
+                <p class="contactText"style="padding-top:10px">The sports
+                    committee is to promote
+                    every individuals’
+                    health, physical well-being as well as the acquistion of physical skills among the
+                    students.</p>
+                <div style="padding-top: 25px; display: flex; flex-direction: row;">
+                    <a href="mailto:nmimsnavimumbai.sports@nmims.edu.in" target="_blank"><img src="images/email.png" class="contactImg"></a>
+                    
+                     <a href="https://www.instagram.com/nmimsnavimumbai.sports/" target="_blank"><img src="images/instagram.png" class="contactImg"></a>
+                        
+                </div>
+            </div>
+        </footer>
+
+        
+
+
+        <script src="index.js"></script>
+    </body>
+
+</html>

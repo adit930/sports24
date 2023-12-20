@@ -1,0 +1,293 @@
+@media only screen and (max-width: 768px) {
+    .team .teamBox {
+      flex: 1 0 calc(100% - 20px); /* One item in one line with margin-right */
+      margin-left: 60px;
+    
+  }
+  /* Common styles for both elements */
+  .titleStyle {
+    margin-top: 50px;
+    margin-left: 30px
+  }
+
+  .titleStyleTheme {
+    margin-right: 50px;
+    font-size: 50px;
+  }
+  
+  .titleStyleTeam {
+    margin-left: 100px;
+    font-size: 100px;
+    text-align: center;
+    font: bold;
+    font-family:'League Gothic';
+  }
+  h1 {
+    font-size: 20px;
+    margin-left: 90px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    font-family: 'League Gothic';
+    color: #fff;
+  }
+
+  h1.Sub{
+    font-size: 20px;
+    margin-left:110px ;
+  }
+
+  h1.Com {
+    font-size: 20px;
+    margin-left: 60px;
+
+  }
+  
+  .teamImage {
+    background: #101014;
+    width: 100%;
+    height: 400px;
+    padding: 3px;
+    position: relative;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+    font-family: cursive;
+  }
+  
+  .teamImage:hover {
+    background-color: #ff6600;
+    transition: background-color 1s;
+  }
+  
+  .individuals {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .name {
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+  }
+  
+  .textOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .teamBack {
+    width: 100%;
+    height: 400px;
+    border-radius: 6px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+  }
+  
+  .teamBack {
+    transform: rotateY(180deg);
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .objectiveBox {
+    width: 100%;
+    padding-right: 0;
+    margin: 0 auto; /* Center align the box for mobile */
+    margin-bottom: 20px; /* Add margin between the boxes on mobile */
+    margin-left: 60px;
+    margin-top: 40px;
+  }
+  .titleBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 95px;
+    /* color: "#fff"; */
+    /* background-color: "#000"; */
+    height: "70vh";
+    margin-top: 480px;
+  }
+  .aboutImgStyle {
+    /* margin: 20px; */
+    width: 200px;
+    margin-left: 290px;
+  }
+  
+
+  .objectiveText {
+    width: 100%;
+    line-height: 24px;
+  }
+  .card {
+    width: 100%; /* Adjust width to 100% for mobile devices */
+    margin-left: 120px;
+  }
+
+  .card-container {
+    flex-direction: column; /* Stack cards vertically on mobile devices */
+    align-items: center; /* Center-align cards on mobile devices */
+  }
+  .themeBox {
+    display: flex;
+    margin-left: 30px;
+  }
+  .titleStyle {
+    margin-top: 20px;
+  }    
+  
+  .titleBox p {
+    margin-top: 20px;
+  }
+  .themeBox h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'League Gothic';
+    color: #fff;
+    margin-left: 20px;
+  }
+  
+  .descriptionBox {
+    margin-top: 60px;
+    margin-left: 27px;
+  }
+
+  .descriptionBox p {
+    margin-left: 80px;
+  }
+  
+  .descriptionBox p {
+    font-weight: 400;
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .card-container h1 {
+    text-align: center;
+  }
+  
+  .themeText {
+    font-size: 27px;
+    text-align: center;
+    font-family: 'Montserrat';
+    margin-top: 63px;
+    width: 90%;
+    margin-left: 40px;
+  }
+  #event.titlebox1 {
+    margin-left: 90px;
+    margin-top: 80px;
+  }
+  .eventsText {
+    margin-left: 80px;
+    margin-top: 30px; /* Adjust margin for mobile devices */
+  }
+
+  .events {
+    flex-direction: column;
+    margin-left: 100px;
+    margin-top: 50px; /* Stack events vertically on mobile */
+  }
+
+  .wrapper i:first-child {
+    display: block; /* Show the first child icon on mobile */
+  }
+
+  .wrapper i:last-child {
+    display: block; /* Hide the last child icon on mobile */
+  }
+
+  .carousel img {
+    height: 200px; /* Adjust image height for mobile devices */
+    width: 100%; /* Make images take full width on mobile */
+    margin-left: 0; /* Remove left margin for mobile devices */
+  }
+  /*table*/
+
+  .titleBox1 {
+    margin-left: 74px;
+    margin-top: 40px;
+  }
+  .main.table {
+    width: 90vw; /* Adjust width for mobile devices */
+    height: 90vh; /* Adjust height for mobile devices */
+    margin-left: 10px; /* Add margin to the left for mobile devices */
+  }
+
+  .table__header {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table__header .input-group {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .table__header .input-group:hover {
+    width: 100%;
+  }
+
+  .table__body {
+    width: 100%;
+    max-height: calc(90% - 1.6rem);
+    margin: 0.8rem 0;
+  }
+
+  table {
+    font-size: 14px; /* Adjust font size for mobile devices */
+  }
+
+  td img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+  }
+  .footer{
+    align-items: center;
+    margin-left: 120px;
+  }
+  
+  .contactText{
+    color:#fff;
+    align-self: center;
+    padding-left: 10px;
+    margin-top: 10px;
+    font-size: 1.05rem;
+  }
+  
+  .contactImg{
+    margin: 0 20px;
+    width: 40px;
+  }
+}

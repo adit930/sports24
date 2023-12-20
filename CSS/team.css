@@ -1,0 +1,117 @@
+
+body{
+    background-color: #101014;
+  }
+
+  
+  p{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    margin-top: 10px;
+  }
+  
+  @property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+  
+  :root {
+    --teamImage-height: 50vh;
+    --teamImage-width: calc(var(--teamImage-height) / 1.5);
+  }
+
+ 
+
+
+  .mot {
+      margin: 30px 0;
+  }
+
+  .team {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -10px; /* Adjust the margin as needed */
+  }
+
+  .team .teamBox {
+      flex: 1 0 calc(33.333% - 20px); /* Three items in one line with margin-right */
+      margin: 0 10px 20px 10px; /* Adjust the margin as needed */
+      position: relative;
+      overflow: hidden;
+  }
+
+  .teamImage {
+      background: #101014;
+      width: 100%;
+      height: 400px; /* Adjusted height */
+      padding: 3px;
+      position: relative;
+      border-radius: 6px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      display: flex;
+      font-size: 1.5em;
+      color: rgb(88 199 250 / 0%);
+      cursor: pointer;
+      font-family: cursive;
+  }
+
+  .teamImage:hover {
+      background-color: #ff6600; /* Red background on hover */
+      transition: background-color 1s;
+  }
+
+  .individuals {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto; /* Make images responsive */
+      height: auto; /* Make images responsive */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      border-radius: 8px;
+  }
+
+  .name {
+      margin: 0;
+      color: #fff; /* Text color */
+      font-size: 1em;
+  }
+
+  .textOverlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for text */
+      padding: 10px;
+      box-sizing: border-box;
+      
+  }
+  
+  .teamBack {
+    width: 100%;
+    height: 400px; /* Adjusted height */
+    border-radius: 6px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backface-visibility: hidden;
+}
+
+.teamBack {
+    transform: rotateY(180deg);
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

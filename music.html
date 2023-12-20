@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Music Website</title>
+</head>
+<body>
+
+<audio id="backgroundMusic" loop>
+    <source src="Metro Boomin - Am I Dreaming (Lyrics) ft. A$AP Rocky, Roisee.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<script>
+    const audio = document.getElementById('backgroundMusic');
+
+    // Play the music when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        audio.play();
+    });
+
+    // You can add controls to pause/play the music if needed
+    document.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+        } 
+    });
+</script>
+
+</body>
+</html>
